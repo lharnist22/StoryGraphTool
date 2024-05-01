@@ -1,58 +1,297 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "A day in the life of Luc :)",
+    "Credits": "Created by me (Luc Harnist).",
+    "InitialLocation": "My Room",
+    "preworkout": false,
+    
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        
+        "My Room": {
+            "Body": "This is my room! I can play games or head out to the living room.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "PC",
+                    "Target": "PC"
+                },
+                {
+                    "Text": "Living Room",
+                    "Target": "Living Room"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "PC": {
+            "Body": "This is my PC! I can talk with friends, play some games, or get up and do something else.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "My Room",
+                    "Target": "My Room"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Talk with Friends",
+                    "Target": "Talk with Friends"
+                },
+                {
+                    "Text": "Play Games",
+                    "Target": "Play Games"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Play Games": {
+            "Body": "I love playing games! Video games have been a part of my life since as long as I can remember. My favorites change day by day, but currently they are Destiny, Counter Strike, Omori, Elden Ring, and Hades ",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Play Games",
+                    "Target": "Play Games"
                 },
                 {
-                    "Text": "South",
+                    "Text": "Talk with Friends",
+                    "Target": "Talk with Friends"
+                },
+                {
+                    "Text": "My Room",
+                    "Target": "My Room"
+                }
+            ]
+        },
+        "Talk with Friends": {
+            "Body": "I spend a lot of time talking to my friends from back home, mainly through discord. Some of these friends I've had since Kindergarten, and some others I've met later in life. But I know for sure that any given opportunity I have I'll try to spend time with them, play whatever game it is they wanna play, or just hangout and talk with them. They've been there for me through thick and thin and I cannot thank them enough.",
+            "Choices": [
+                {
+                    "Text": "My Room",
+                    "Target": "My Room"
+                },
+                {
+                    "Text": "Play Games",
+                    "Target": "Play Games"
+                }
+            ]
+        },
+        "Living Room": {
+            "Body": "This is my living room! A place to hangout and chill before I get ready to leave somewhere else.",
+            "Choices": [
+                {
+                    "Text": "Kitchen",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "Oakes",
                     "Target": "Oakes"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Kitchen": {
+            "Body": "This is my kitchen, this is where I prepare all my meals and make my preworkout before I head to the gym.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Make Preworkout",
+                    "Target": "Preworkout"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Cook food",
+                    "Target": "Cook food"
+                },
+                {
+                    "Text": "Living Room",
+                    "Target": "Living Room"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "Preworkout": {
+            "Body": "I've prepared my Preworkout! This means I can go to the gym!",
+            "preworkout": true,
+            "Choices": [
+                {
+                    "Text": "Cook food",
+                    "Target": "Cook food"
+                },
+                {
+                    "Text": "Living Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Cook food": {
+            "Body": "I usually prepare some chicken, beef, or fish with some rice and veggies.",
+            "Choices": [
+                {
+                    "Text": "Make Preworkout",
+                    "Target": "Preworkout"
+                },
+                {
+                    "Text": "Living Room",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Oakes":{
+            "Body": "This is Oakes college, the place where I've met most of my close friends, and the place I call home.",
+            "Choices": [
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                },
+                {
+                    "Text": "Go to ARCenter",
+                    "Target": "ARCenter"
+                },
+                {
+                    "Text": "Go to Gym",
+                    "Target": "Gym",
+                    "Condition": {
+                        "preworkout": true
+                    }
+                }
+            ]
+        },
+        "ARCenter":{
+            "Body": "This is the ARCenter, that's where I get most of my studying done.",
+            "Choices": [
+                {
+                    "Text": "Study",
+                    "Target": "Study"
+                },
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                },
+                {
+                    "Text": "Go to Class",
+                    "Target": "Class"
+                }
+            ]
+        },
+        "McHenry":{
+            "Body": "This is the McHenry Library, the center point of campus.",
+            "Choices": [
+                {
+                    "Text": "Go to Class",
+                    "Target": "Class"
+                },
+                {
+                    "Text": "Go to Oakes",
+                    "Target": "Oakes"
+                },
+                {
+                    "Text": "Go to ARCenter",
+                    "Target": "ARCenter"
+                }
+            ]
+        },
+        "Gym":{
+            "Body": "This is the Gym! I spend a lot of time here and have been going consistently for around a year and a couple months now.",
+            "Choices": [
+                {
+                    "Text": "Workout",
+                    "Target": "Workout"
+                },
+                {
+                    "Text": "Talk with Gym buddies",
+                    "Target": "Gym buddies"
+                },
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                },
+                {
+                    "Text": "Go to Class",
+                    "Target": "Class"
+                },
+                {
+                    "Text": "Go to Oakes",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "Class":{
+            "Body": "This is my Game Design class! I've been really enjoying this class, and I've been studying really hard for it.",
+            "Choices": [
+                {
+                    "Text": "Talk with Jim!",
+                    "Target": "Jim"
+                },
+                {
+                    "Text": "Go to Gym",
+                    "Target": "Gym",
+                    "Condition": {
+                        "preworkout": true
+                    }
+                },
+                {
+                    "Text": "Go to ARCenter",
+                    "Target": "ARCenter"
+                },
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                }
+            ]
+        },
+        "Jim":{
+            "Body": "Jim: Hey be sure to finish up that Link-Based Game assignment! Remember, you have to add an NPC with dialogue that's specific to a location!",
+            "Choices": [
+                {
+                    "Text": "Go to Gym",
+                    "Target": "Gym",
+                    "Condition": {
+                        "preworkout": true
+                    }
+                },
+                {
+                    "Text": "Go to ARCenter",
+                    "Target": "ARCenter"
+                },
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                }
+            ]
+        },
+        "Gym buddies":{
+            "Body": "I have a bunch of gym buddies, there's Ala'addin, Johnny, Juan, Adrian. There all pretty cool and help me stay consistent with the gym.",
+            "Choices": [
+                {
+                    "Text": "Workout",
+                    "Target": "Workout"
+                },
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                },
+                {
+                    "Text": "Go to Class",
+                    "Target": "Class"
+                },
+                {
+                    "Text": "Go to Oakes",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "NotYet":{
+            "Body": "Hmmmm I can't exactly go to the gym yet, I need to make my preworkout first (Hint: Go back to my apartment).",
+            "Choices": [
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                }
+            ]
+        },
+        "Workout":{
+            "Body": "GRAAAHHHH!! I feel much better now, at my strongest I've been able to squat 245 x 5, bench 205 x 3, and some other stuff but I'm trying my best to increase those numbers!",
+            "Choices": [
+                {
+                    "Text": "Go to McHenry",
+                    "Target": "McHenry"
+                },
+                {
+                    "Text": "Go to Class",
+                    "Target": "Class"
+                },
+                {
+                    "Text": "Go to Oakes",
+                    "Target": "Oakes"
+                }
+            ]
         }
     }
 }
